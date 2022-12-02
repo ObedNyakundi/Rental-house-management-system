@@ -45,7 +45,14 @@ Admin panel login credentials are:
 
 # License
 This is the original app as was developed in 2018, in a collaboration with Phoebebots, Kenya, our startup. A few changes (missing in this free app) have been made ever since its deployment to enhance its security, stability, and efficiency. Even then, we took care to retain the stability of this application. It's my hope that you will find this app fun to use and easy to improve. 
-Have fun!
+
+Feel free to use it as it will suit you. To receive a complete version of the software, please reach out to me via:
+ 
+Email: *paulnyaxx@gmail.com* or 
+Tel:   *+254706748162*
+
+I wish you all the best as you explore this limited app!
+
 
 # Views
 ## The Blog
@@ -60,17 +67,14 @@ Have fun!
 ## Form Sample (Form for admitting a tenant)
 ![A Form for admitting tenants](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/form-admit%20tenant.png)
 
+# MObile phone views
+## Phone dashboard
+![Administrator dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/phone_dashboard.png)
 
+## Phone form (admitting a tenant)
+![Administrator adding a tenant](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/phone_tenants.png)
 
+## Phone SMS notifications
+![SMS Notifications](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/Screenshot_2021-06-09-09-02-47.png)
 
-
-
-
-
-
-
-
-
-
-
-
+![SMS Notifications](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/Screenshot_2021-06-09-09-03-02.png)
