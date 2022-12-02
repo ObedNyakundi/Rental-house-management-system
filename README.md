@@ -67,7 +67,7 @@ I wish you all the best as you explore this limited app!
 ## Form Sample (Form for admitting a tenant)
 ![A Form for admitting tenants](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/form-admit%20tenant.png)
 
-# MObile phone views
+# Mobile phone views
 ## Phone dashboard
 ![Administrator dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/phone_dashboard.png)
 
