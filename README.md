@@ -61,6 +61,9 @@ Tel:   *+254706748162*
 I wish you all the best as you explore this limited app!
 
 
+# And there's a better one. ...
+Owing to the huge support I received, I decided to rework the entire app using Laravel. I employed the use of Livewire and Filament to create a better, and more secure app. Please feel free to reach out if you would love to be a mong the first people to test our new release
+
 # Views
 ## The Blog
 ![Blog](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/Blog.png)
