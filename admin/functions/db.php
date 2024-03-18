@@ -1,5 +1,8 @@
-
 <?php
+//error reporting. Disable these three lines before deployment.
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL); 
 
 /*this file is the main connecor and handles data cleaning and issues of login 
 
@@ -122,7 +125,4 @@ $database='Company';
         return false;
       }
     }
-
-
-
 ?> 

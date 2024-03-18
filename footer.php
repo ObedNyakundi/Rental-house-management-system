@@ -1,5 +1,3 @@
-
-
 <div class="footer">
 		<div class="col-md-4 footer-left-agileits">
 			<h3>Address</h3>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 27, 2023 at 01:15 AM
+-- Generation Time: Jan 25, 2024 at 10:20 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -111,7 +111,8 @@ CREATE TABLE `houses` (
 
 INSERT INTO `houses` (`houseID`, `house_name`, `number_of_rooms`, `rent_amount`, `location`, `num_of_bedrooms`, `house_status`) VALUES
 (11, 'A Blue House', 2, 10000, 'Nairobi Cbd', 2, 'Vacant'),
-(12, 'The Palatial House', 0, 70000, 'Nairobi Cbd', 5, 'Occupied');
+(12, 'The Palatial House', 0, 70000, 'Nairobi Cbd', 5, 'Occupied'),
+(13, 'Telposta House', 12, 3000, 'Mvita', 2, 'Vacant');
 
 -- --------------------------------------------------------
 
@@ -189,7 +190,8 @@ INSERT INTO `locations` (`id`, `location_name`, `geo_id`) VALUES
 (2, 'Mtongwe', ''),
 (3, 'Mvita', ''),
 (4, 'Nyali', ''),
-(5, 'Nairobi Cbd', 'undefined');
+(5, 'Nairobi Cbd', 'undefined'),
+(6, 'Tanga', 'undefined');
 
 -- --------------------------------------------------------
 
@@ -363,7 +365,8 @@ INSERT INTO `transactions` (`id`, `actor`, `time`, `description`, `seen`) VALUES
 (29, 'Admin (obed)', '2023-10-19 : 13:37:33', 'obed added a new house (The Palatial House) with 1 rentable units, and 5 bedrooms per unit located in Nairobi Cbd', 'YES'),
 (30, 'Admin (obed)', '2023-10-19 : 13:39:10', 'obed admitted a new tenant (Someone Watching) at 2023-10-19 : 13:39:10', 'YES'),
 (31, 'Admin (obed)', '2023-10-19 : 13:41:19', 'obed added a new rental invoice (INV20231019134119) for tenant (Someone Watching) at 2023-10-19 : 13:41:19.', 'YES'),
-(32, 'Admin (obed)', '2023-10-19 : 13:42:34', 'obed added payment of 70000 for Someone Watching, under invoice ID: INV20231019134119', 'YES');
+(32, 'Admin (obed)', '2023-10-19 : 13:42:34', 'obed added payment of 70000 for Someone Watching, under invoice ID: INV20231019134119', 'YES'),
+(33, 'Admin (obed)', '2024-01-25 : 10:17:45', 'obed added a new house (Telposta House) with 12 rentable units, and 2 bedrooms per unit located in Mvita', 'NO');
 
 -- --------------------------------------------------------
 
@@ -372,7 +375,7 @@ INSERT INTO `transactions` (`id`, `actor`, `time`, `description`, `seen`) VALUES
 --
 DROP TABLE IF EXISTS `invoicesView`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `invoicesView`  AS SELECT `invoices`.`invoiceNumber` AS `invoiceNumber`, `tenants`.`tenant_name` AS `tenant_name`, `invoices`.`tenantID` AS `tenantID`, `tenants`.`phone_number` AS `phone_number`, `invoices`.`amountDue` AS `amountDue`, `invoices`.`dateOfInvoice` AS `dateOfInvoice`, `invoices`.`dateDue` AS `dateDue`, `invoices`.`status` AS `status`, `invoices`.`comment` AS `comment` FROM (`invoices` left join `tenants` on(`invoices`.`tenantID` = `tenants`.`tenantID`)) ;
+CREATE VIEW `invoicesView`  AS SELECT `invoices`.`invoiceNumber` AS `invoiceNumber`, `tenants`.`tenant_name` AS `tenant_name`, `invoices`.`tenantID` AS `tenantID`, `tenants`.`phone_number` AS `phone_number`, `invoices`.`amountDue` AS `amountDue`, `invoices`.`dateOfInvoice` AS `dateOfInvoice`, `invoices`.`dateDue` AS `dateDue`, `invoices`.`status` AS `status`, `invoices`.`comment` AS `comment` FROM (`invoices` left join `tenants` on(`invoices`.`tenantID` = `tenants`.`tenantID`)) ;
 
 -- --------------------------------------------------------
 
@@ -381,7 +384,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `paymentsView`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `paymentsView`  AS SELECT `payments`.`paymentID` AS `paymentID`, `payments`.`tenantID` AS `tenantID`, `tenantsView`.`tenant_name` AS `tenant_name`, `tenantsView`.`house_name` AS `house_name`, `payments`.`invoiceNumber` AS `invoiceNumber`, `payments`.`expectedAmount` AS `expectedAmount`, `payments`.`amountPaid` AS `amountPaid`, `payments`.`balance` AS `balance`, `payments`.`mpesaCode` AS `mpesaCode`, `payments`.`dateofPayment` AS `dateofPayment`, `payments`.`comment` AS `comment` FROM (`payments` left join `tenantsView` on(`payments`.`tenantID` = `tenantsView`.`tenantID`)) ;
+CREATE   VIEW `paymentsView`  AS SELECT `payments`.`paymentID` AS `paymentID`, `payments`.`tenantID` AS `tenantID`, `tenantsView`.`tenant_name` AS `tenant_name`, `tenantsView`.`house_name` AS `house_name`, `payments`.`invoiceNumber` AS `invoiceNumber`, `payments`.`expectedAmount` AS `expectedAmount`, `payments`.`amountPaid` AS `amountPaid`, `payments`.`balance` AS `balance`, `payments`.`mpesaCode` AS `mpesaCode`, `payments`.`dateofPayment` AS `dateofPayment`, `payments`.`comment` AS `comment` FROM (`payments` left join `tenantsView` on(`payments`.`tenantID` = `tenantsView`.`tenantID`)) ;
 
 -- --------------------------------------------------------
 
@@ -390,7 +393,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `tenantsView`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tenantsView`  AS SELECT `tenants`.`tenantID` AS `tenantID`, `tenants`.`houseNumber` AS `houseNumber`, `tenants`.`tenant_name` AS `tenant_name`, `tenants`.`email` AS `email`, `tenants`.`ID_number` AS `ID_number`, `tenants`.`profession` AS `profession`, `tenants`.`phone_number` AS `phone_number`, `tenants`.`dateAdmitted` AS `dateAdmitted`, `tenants`.`agreement_file` AS `agreement_file`, `houses`.`house_name` AS `house_name`, `houses`.`number_of_rooms` AS `number_of_rooms`, `houses`.`house_status` AS `house_status`, `houses`.`rent_amount` AS `rent_amount`, `houses`.`houseID` AS `houseID` FROM (`tenants` left join `houses` on(`tenants`.`houseNumber` = `houses`.`houseID`)) ;
+CREATE   VIEW `tenantsView`  AS SELECT `tenants`.`tenantID` AS `tenantID`, `tenants`.`houseNumber` AS `houseNumber`, `tenants`.`tenant_name` AS `tenant_name`, `tenants`.`email` AS `email`, `tenants`.`ID_number` AS `ID_number`, `tenants`.`profession` AS `profession`, `tenants`.`phone_number` AS `phone_number`, `tenants`.`dateAdmitted` AS `dateAdmitted`, `tenants`.`agreement_file` AS `agreement_file`, `houses`.`house_name` AS `house_name`, `houses`.`number_of_rooms` AS `number_of_rooms`, `houses`.`house_status` AS `house_status`, `houses`.`rent_amount` AS `rent_amount`, `houses`.`houseID` AS `houseID` FROM (`tenants` left join `houses` on(`tenants`.`houseNumber` = `houses`.`houseID`)) ;
 
 --
 -- Indexes for dumped tables
@@ -489,13 +492,13 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `houses`
 --
 ALTER TABLE `houses`
-  MODIFY `houseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `houseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `locations`
 --
 ALTER TABLE `locations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `payments`
@@ -525,7 +528,7 @@ ALTER TABLE `tenants`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

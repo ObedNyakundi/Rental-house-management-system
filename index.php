@@ -1,8 +1,3 @@
-<!--
-author: Ethredah
-author URL: http://ethredah.github.io
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -150,4 +145,3 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<?php 
 		include("footer.php");
 	?>
-

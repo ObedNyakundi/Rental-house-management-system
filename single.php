@@ -1,10 +1,4 @@
-<!--
-author: Ethredah
-author URL: http://ethredah.github.io
--->
-
-
-    <?php
+<?php
 
     require_once "Company_admin/functions/db.php";
 
@@ -23,7 +17,7 @@ author URL: http://ethredah.github.io
         header('Location:blog.php');
       }
 
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">

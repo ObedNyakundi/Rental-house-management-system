@@ -1,7 +1,4 @@
-
-
-    <?php
-
+<?php
     ob_start();
     require_once "functions/db.php";
 

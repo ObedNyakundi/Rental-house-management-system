@@ -1,10 +1,3 @@
-<!--
-author: Ethredah
-author URL: http://ethredah.github.io
--->
-
-
-
 <?php
 
   require_once "admin/functions/db.php";

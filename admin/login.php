@@ -1,12 +1,5 @@
-
 <?php ob_start();
     session_start();
-/*
-
-CREATE VIEW `paymentsView`  AS  select `payments`.`paymentID` AS `paymentID`,`payments`.`tenantID` AS `tenantID`,`tenantsView`.`tenant_name` AS `tenant_name`,`tenantsView`.`house_name` AS `house_name`,`payments`.`invoiceNumber` AS `invoiceNumber`,`payments`.`expectedAmount` AS `expectedAmount`,`payments`.`amountPaid` AS `amountPaid`,`payments`.`balance` AS `balance`,`payments`.`mpesaCode` AS `mpesaCode`,`payments`.`dateofPayment` AS `dateofPayment`,`payments`.`comment` AS `comment` from (`payments` left join `tenantsView` on(`payments`.`tenantID` = `tenantsView`.`tenantID`))
-
-*/
-
 
         // LOGIN SCRIPT
 

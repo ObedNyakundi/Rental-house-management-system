@@ -1,5 +1,4 @@
-    
-    <?php 
+<?php 
 
     //a page name
     $pgnm='Nyumbani: Add a new Location';

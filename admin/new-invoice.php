@@ -1,5 +1,4 @@
-    
-    <?php 
+<?php 
 
     //a page name
     $pgnm='Nyumbani: New Invoice';

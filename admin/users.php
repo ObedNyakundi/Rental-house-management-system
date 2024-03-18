@@ -1,7 +1,3 @@
-
-
-
-
 <?php
     
     ob_start();
@@ -105,16 +101,18 @@
                                                     echo '
                                                     <thead>
                                                     <tr>
-                                                        <th>email</th>
-                                                        <th>date</th>
-                                                        <th>action</th>
+                                                        <th>Name</th>
+                                                        <th>Email</th>
+                                                        <th>Date</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tfoot>
                                                     <tr>
-                                                        <th>email</th>
-                                                        <th>date</th>
-                                                         <th>action</th>
+                                                        <th>Name</th>
+                                                        <th>Email</th>
+                                                        <th>Date</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                 </tfoot>
                                                 <tbody>
@@ -128,6 +126,7 @@
                                     
 
                                         <tr>
+                                            <td>'.$row["name"].'</td>
                                             <td>'.$row["email"].'</td>
                                             <td>'.$row["date"].'</td>
                                             <td><a href="#"><i class="fa fa-trash"  data-toggle="modal" data-target="#responsive-modal'.$row["id"].'" title="remove" style="color:red;"></i></a></td>

@@ -1,8 +1,3 @@
-<!--
-author: Ethredah
-author URL: http://ethredah.github.io
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

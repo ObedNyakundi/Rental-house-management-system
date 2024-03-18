@@ -1,28 +1,22 @@
-
 <?php
-
   /* DATABASE CONNECTION*/
       require "db.php";
    /*DATABASE CONNECTION */
-
-
-  if (isset($_POST['submit'])) {
-
-
+  if (isset($_POST['submit'])) 
+  {
       //-- Get Employee Data --//
-      $email = $_POST['email'];
+      $email = is_email($_POST['email']);
       $uname=is_username($_POST['uname']);
       $role=uncrack($_POST['role']);
       
 
       // CHECK IF EMPLOYEE EMAIL EXISTS //
       
-      $sql = "SELECT id FROM admin WHERE email = $email";
-      $stmt = $db->prepare($sql);
-      $stmt->execute([$email]);
+      $sql = "SELECT `id` FROM `admin` WHERE `email` = '$email'";
+      $stmt = mysqli_query($conn, $sql);
 
 
-      if ($stmt->rowCount()>0) {
+      if (mysqli_num_rows($stmt) > 0) {
           // email already EXISTS
             echo "Oops...This email already exists!";
             // die();
@@ -35,7 +29,7 @@
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                   $emailErr = "Invalid email format";
                   echo $emailErr;
-                  die();
+                  //die();
                   $email = $_POST['email'];
                }
                else {
@@ -52,6 +46,17 @@
       //header('Location:../users.php?success');
 
       $stmt = $db->prepare($sql);
+
+      try {
+      $stmt->execute();
+      header('Location:../users.php?added');
+
+      }
+
+     catch (Exception $e) {
+        $e->getMessage();
+        echo "Error";
+    }
 
       }
 

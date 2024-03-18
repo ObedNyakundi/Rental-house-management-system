@@ -1,6 +1,3 @@
-
-
-
 <?php
     
     ob_start();
