@@ -1,5 +1,7 @@
 # A web-based Rental House Management System
-This is a web application for Rental House Management (with SMS, and Mpesa integration). 
+This is a web application for Rental House Management (with SMS, and Mpesa integration). Without doubt, this is simply the best open-source rental House management system available for the Kenyan market. And I honestly haven't seen any local developer who has been generous enough to offer anything better.
+
+A lot of care has been taken to ensure this app's stability, and to bring back the good old imperative PHP with a new makeup. Here is what you need to know:
 ![Administrator dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/dashboard_clear.png)
 
 #Included features
@@ -51,8 +53,8 @@ This is the original app as was developed in 2018. A few changes have been made 
 
 Feel free to use it as it will suit you. To receive a complete version of the software, please reach out to me via:
 
-# Get It now for just USD 10 or KES K.Sh. 1000/=
-Reach out for a stable version via:
+# But me some coffee with just USD 10 or KES K.Sh. 1000/=
+After a few complaints, I did update a few methods that were depricated to make it up-to-date. Reach out for a stable version via:
 Email: *paulnyaxx@gmail.com* or 
 Tel:   *+254706748162*
 
