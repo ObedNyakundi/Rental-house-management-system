@@ -58,10 +58,16 @@ Feel free to use it as it will suit you. To receive a complete version of the so
 Sure. How about you fork the app, and enhance it then share the progress?
 
 # Buy me some coffee?
-With just USD 10 or KES K.Sh. 1000/= or more, you can be among the few supporters of this noble project. Through your support, we will be able to set up our website, and offer full-time support to this great community. To add to it, that will be a motivation to make our apps even better and more secure. 
+With as little as 10 USD / K.Sh. 1000/= or more, you can be among the few supporters of this noble project. 
+
+Through your support, we will be able to set up our website, and offer full-time support to this great community. To add to it, that will be a motivation to make our apps even better and more secure.
+
 After a few complaints, I did update a few methods that were depricated to make it up-to-date. Reach out for a stable version via:
+
 Email: *paulnyaxx@gmail.com* or 
 Tel:   *+254706748162*
+
+Paypal: harrysp254@gmail.com
 
 I wish you all the best as you explore this limited app!
 
