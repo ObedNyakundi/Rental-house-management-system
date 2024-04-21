@@ -99,4 +99,6 @@ I wish you all the best as you explore this limited app!
 ![SMS Notifications](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/Screenshot_2021-06-09-09-03-02.png)
 
 
-# Regards and 
+# Special Thanks to:
+- [Obed Nyakundi](https://github.com/ObedNyakundi)
+- [Basedata Softwares] (https://www.basedatasoftwares.co.ke)
