@@ -101,4 +101,4 @@ I wish you all the best as you explore this limited app!
 
 # Special Thanks to:
 - [Obed Nyakundi](https://github.com/ObedNyakundi)
-- [Basedata Softwares] (https://www.basedatasoftwares.co.ke)
+- [Basedata Softwares](https://www.basedatasoftwares.co.ke)
