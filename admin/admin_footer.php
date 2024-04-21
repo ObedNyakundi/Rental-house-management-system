@@ -60,13 +60,13 @@ function store(name, val) {
         Cookies.set('themeselection', currentStyle, { expires: 30 });
         store('theme', currentStyle);
         var themeselected= Cookies.get('themeselection');
-        $('#theme').attr({href: '../css/colors/'+themeselected+'.css'})
+        $('#theme').attr({href: 'css/colors/'+themeselected+'.css'})
     });
 
     var currentTheme = get('theme');
     if(currentTheme)
     {
-      $('#theme').attr({href: '../css/colors/'+currentTheme+'.css'});
+      $('#theme').attr({href: 'css/colors/'+currentTheme+'.css'});
     }
     // color selector
     $('#themecolors').on('click', 'a', function(){
@@ -75,22 +75,19 @@ function store(name, val) {
       });
 
 });
- function get(name) {
-    
-  }
 
 $(document).ready(function(){
     $("*[theme]").click(function(e){
       e.preventDefault();
         var currentStyle = Cookies.get('themeselection');
         store('theme', currentStyle);
-        $('#theme').attr({href: '../css/colors/'+currentStyle+'.css'})
+        $('#theme').attr({href: 'css/colors/'+currentStyle+'.css'})
     });
 
     var currentTheme = Cookies.get('themeselection');
     if(currentTheme)
     {
-      $('#theme').attr({href: '../css/colors/'+currentTheme+'.css'});
+      $('#theme').attr({href: 'css/colors/'+currentTheme+'.css'});
     }
     // color selector
 $('#themecolors').on('click', 'a', function(){
