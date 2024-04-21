@@ -56,7 +56,7 @@ Admin panel login credentials are:
 Watch the System **[illustration video](https://www.youtube.com/watch?v=uL3LVG_FmCc&t=1095s)** here: [https://www.youtube.com/watch?v=uL3LVG_FmCc&t=1095s](https://www.youtube.com/watch?v=uL3LVG_FmCc&t=1095s)
 
 ## Live Testing
-Try it Live **[Here.](https://www.basedatasoftwares.co.ke/rentals/admin)** (https://www.basedatasoftwares.co.ke/rentals/admin) Courtesy of **[BaseData Softwares](https://www.basedatasoftwares.co.ke)**
+Try it Live **[Here:](https://www.basedatasoftwares.co.ke/rentals/admin)** (https://www.basedatasoftwares.co.ke/rentals/admin) Courtesy of **[BaseData Softwares](https://www.basedatasoftwares.co.ke)**
 
 # License
 This is the original app as was developed in 2018. A few changes have been made ever since its deployment to enhance its security, stability, and efficiency. Even then, we took care to retain the stability of this application. It's my hope that you will find this app fun to use and easy to improve. 
