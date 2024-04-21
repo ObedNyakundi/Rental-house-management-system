@@ -35,6 +35,15 @@ This is a web application for Rental House Management (with SMS, and Mpesa integ
  - Create a table named `Company`
  - import the `Company.sql` file, from the `database` folder into your `PHPmyadmin` table `Company`
  - copy all the contents of folder containing the `index.php` file into your server.
+ - open the file `admin/functions/db.pdf`
+ - edit the details of the following to match your server connection details:
+ ```
+$host= 'YourHost';
+$user='YourDatabaseUserName';
+$usrpassword='YourDBPassword';
+$database='YourDBName';
+
+ ``` 
  - run the `index.php` file
  - run the `admin/` folder to login into the admin panel
 
@@ -46,15 +55,20 @@ Admin panel login credentials are:
 ## YouTube Link:
 Watch the System **[illustration video](https://www.youtube.com/watch?v=uL3LVG_FmCc&t=1095s)** here: [https://www.youtube.com/watch?v=uL3LVG_FmCc&t=1095s](https://www.youtube.com/watch?v=uL3LVG_FmCc&t=1095s)
 
+## Live Testing
+Try it Live [Here.](https://www.basedatasoftwares.co.ke/rentals/admin) Courtesy of [BaseData Softwares](https://www.basedatasoftwares.co.ke)
+
 # License
 This is the original app as was developed in 2018. A few changes have been made ever since its deployment to enhance its security, stability, and efficiency. Even then, we took care to retain the stability of this application. It's my hope that you will find this app fun to use and easy to improve. 
 
 Feel free to use it as it will suit you. To receive a complete version of the software, please reach out to me via:
 
-# Get It now for just USD 10 or KES K.Sh. 1000/=
-Reach out for a stable version via:
+# Need further support?
+Reach out for a stable version or support via:
 Email: *paulnyaxx@gmail.com* or 
 Tel:   *+254706748162*
+You can buy me coffee via M-Pesa:  *+254706748162* or Paypal: *harrysp254@gmail.com*
+
 
 I wish you all the best as you explore this limited app!
 
@@ -83,3 +97,6 @@ I wish you all the best as you explore this limited app!
 ![SMS Notifications](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/Screenshot_2021-06-09-09-02-47.png)
 
 ![SMS Notifications](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/Screenshot_2021-06-09-09-03-02.png)
+
+
+# Regards and 

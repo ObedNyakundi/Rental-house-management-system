@@ -97,14 +97,14 @@
                                     }
 								?>	
 
-                            <h3 class="box-title m-b-0">Current tenants listing ( <x style="color: orange;"><?php echo mysqli_num_rows($query);?></x> )</h3>
+                            <h3 class="box-title m-b-0">Current tenants listing ( <x style="color: orange;"><?php echo @mysqli_num_rows($query);?></x> )</h3>
                             <p class="text-muted m-b-30">Export data to Copy, CSV, Excel, PDF & Print</p>
                             <div class="table-responsive">
                                 <table id="example23" class="display nowrap" cellspacing="0" width="100%">
 
                                     <?php 
 
-                                    if (mysqli_num_rows($query)==0) {
+                                    if (@mysqli_num_rows($query)==0) {
                                                     echo "<i style='color:brown;'>No Tenants to Display:( </i> ";
                                                 }
                                                 else{
@@ -144,7 +144,7 @@
                                                     ';
                                                 }
 
-                                        while ($row = mysqli_fetch_array($query)) {
+                                        while ($row = @mysqli_fetch_array($query)) {
                                             // $noOfRooms = $row["number_of_rooms"];
                                              //$hsStatus=$row['house_status'];
 
