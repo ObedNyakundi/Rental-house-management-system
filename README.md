@@ -2,7 +2,7 @@
 This is a web application for Rental House Management (with SMS, and Mpesa integration). 
 ![Administrator dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/dashboard_clear.png)
 
-# Or the new One made with Laravel...
+# Or the more stable Laravel version...
 ![New Dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/dashbnew.png)
 
 
