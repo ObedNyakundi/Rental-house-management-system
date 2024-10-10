@@ -103,12 +103,21 @@ I wish you all the best as you explore this limited app!
 # New Version
 Our improved premium version is now out, developed in Laravel. It contains features for:
 
+## General
 - Adding apartments
 - Adding rental units to apartments
 - Admitting tenants to Rental units.
 - Automated invoicing to tenats.
+- Manual addition of payments (currently working on an android platform for unified automated payments)
 - Printable payment receipts and invoices
+
+## Administration
+In the new version, the administrator can create custom roles for other users in the system. I.e, a landlord can create a role of a "caretaker" or "accountant" and assign appropriate roles.
+
+## Marketing
+We added
 - Bulk SMS incorporated for marketing (utilizes TextSMS vendor at 0.3 KES per SMS text)
+- A landing page that can display all vacant rooms with their pricing.
 - Theme color changes for better visibility
 
 ![Dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/newdash.png)
