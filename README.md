@@ -2,7 +2,11 @@
 This is a web application for Rental House Management (with SMS, and Mpesa integration). 
 ![Administrator dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/dashboard_clear.png)
 
-#Included features
+# Or the new One made with Laravel...
+![New Dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/newdash.png)
+
+
+# Included features
 - a fancy landing page for display of vacant rooms/houses
 - an administrator panel 
 - a blog 
@@ -100,7 +104,7 @@ I wish you all the best as you explore this limited app!
 
 ![SMS Notifications](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/Screenshot_2021-06-09-09-03-02.png)
 
-# New Version
+# ...And With a New, Secure, Stable Version!
 Our improved premium version is now out, developed in Laravel. It contains features for:
 
 ## General
@@ -120,7 +124,7 @@ We added
 - A landing page that can display all vacant rooms with their pricing.
 - Theme color changes for better visibility
 
-![Dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/newdash.png)
+![New Dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/newdash.png)
 
 # Special Thanks to:
 - [Obed Nyakundi](https://github.com/ObedNyakundi)
