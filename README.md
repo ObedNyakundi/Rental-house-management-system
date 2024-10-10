@@ -55,8 +55,6 @@ Admin panel login credentials are:
 ## YouTube Link:
 Watch the System **[illustration video](https://www.youtube.com/watch?v=uL3LVG_FmCc&t=1095s)** here: [https://www.youtube.com/watch?v=uL3LVG_FmCc&t=1095s](https://www.youtube.com/watch?v=uL3LVG_FmCc&t=1095s)
 
-## Live Testing
-Try it Live **[Here:](https://www.basedatasoftwares.co.ke/rentals/admin)** (https://www.basedatasoftwares.co.ke/rentals/admin) Courtesy of **[BaseData Softwares](https://www.basedatasoftwares.co.ke)**
 
 # License
 This is the original app as was developed in 2018. A few changes have been made ever since its deployment to enhance its security, stability, and efficiency. Even then, we took care to retain the stability of this application. It's my hope that you will find this app fun to use and easy to improve. 
@@ -102,7 +100,18 @@ I wish you all the best as you explore this limited app!
 
 ![SMS Notifications](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/Screenshot_2021-06-09-09-03-02.png)
 
+# New Version
+Our improved premium version is now out, developed in Laravel. It contains features for:
+
+- Adding apartments
+- Adding rental units to apartments
+- Admitting tenants to Rental units.
+- Automated invoicing to tenats.
+- Printable payment receipts and invoices
+- Bulk SMS incorporated for marketing (utilizes TextSMS vendor at 0.3 KES per SMS text)
+- Theme color changes for better visibility
+
+![Dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/newdash.png)
 
 # Special Thanks to:
 - [Obed Nyakundi](https://github.com/ObedNyakundi)
-- [Basedata Softwares](https://www.basedatasoftwares.co.ke)
