@@ -124,7 +124,7 @@ We added
 - A landing page that can display all vacant rooms with their pricing.
 - Theme color changes for better visibility
 
-![New Dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/newdash.png)
+![New Dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/smsnotify.png)
 
 # Special Thanks to:
 - [Obed Nyakundi](https://github.com/ObedNyakundi)
