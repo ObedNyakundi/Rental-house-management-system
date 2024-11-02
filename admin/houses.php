@@ -139,22 +139,107 @@
 
                                         while ($row = mysqli_fetch_array($query)) {
                                             // $id = $row["id"]
+                                            $i=$row["houseID"];
 
                                     echo '
                                     
 
                                         <tr>
                                             <td>'.$row["houseID"].'</td>
-                                            <td>'.$row["house_name"].'</td>
+                                            <td>
+                                            <a href="#" title="Edit record" style="color:#03a9f3" data-toggle="modal" data-target="#responsive-modal_edit'.$i.'">
+                                            '.$row["house_name"].' </a>
+                                            </td>
                                             <td>'.$row["number_of_rooms"].'</td>
                                             <td>'.$row["rent_amount"].'</td>
                                             <td>'.$row["location"].'</td>
                                             <td>'.$row["num_of_bedrooms"].'</td>
                                             <td>'.$row["house_status"].'</td>
-                                            <td><a href="#"><i class="fa fa-trash"  data-toggle="modal" data-target="#responsive-modal'.$row["houseID"].'" title="remove" style="color:red;"></i></a></td>
+                                            <td>
+                                            <a href="#"><i class="fa fa-trash"  data-toggle="modal" data-target="#responsive-modal'.$row["houseID"].'" title="remove" style="color:red;"></i></a> || 
+
+                                            ';
+                                            echo '
+                                                <a href="#" title="Edit record"><i class="fa fa-edit"  data-toggle="modal" data-target="#responsive-modal_edit'.$i.'" title="Edit" style="color:#03a9f3;"></i></a>
+                                            ';
+
+                                            echo '
+                                            </td>
+
+                                            <!-- /.modal to edit -->
+                                            <div id="responsive-modal_edit'.$i.'" class=" modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="overflow-y:auto; display:none;">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                            <h4 style="text-align:center;" class="modal-title">
+                                                            <i class="fa fa-user fa-3x"> </i> Edit
+                                                            
+                                                             '.$row["house_name"].' House details:</h4>
+                                                            </div>
+                                                        <div class="modal-footer">
+
+                                                        <form action="functions/house_manage.php" method="post">
+                                                        <div class="row">
+
+                                                            <div class="form-group col-md-12">
+                                                                <label for="hname">House Name: *</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-addon"><i class="fa fa-home"></i></div>
+                                                                    <input type="text" autofocus name="tname" class="form-control" id="hname" value="'.$row["house_name"].'" placeholder="Enter Officer\'s name" required=""> </div>
+                                                            </div>
+
+                                                            <div class="form-group col-md-12">
+                                                                <label for="temail">Number of Rooms: </label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-addon"><i class="fa fa-home"></i></div>
+                                                                    <input type="number" name="tnum" 
+                                                                    value="'.$row["number_of_rooms"].'"
+                                                                    onkeyup=""
+                                                                    required class="form-control" id="temail" placeholder="e.g 1"> </div>
+                                                            </div>
+
+                                                            <div class="form-group col-md-12">
+                                                                <label for="idnum">Rent Amount: *</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-addon"><i class="fa fa-home"></i></div>
+                                                                    <input type="number" min="1000" required name="rent" class="form-control" value="'.$row["rent_amount"].'" id="idnum" placeholder="e.g. 4000" onkeyup="stripnum(\'idnum\',10);" > </div>
+                                                            </div>
+
+                                                            <input type="text" value="'.$row["houseID"].'" name="hsid" readonly hidden>
+
+                                                            <div class="form-group col-md-12">
+                                                                <label for="oftype">House Status: </label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-addon"><i class="fa fa-home"></i></div>
+                                                                    <select id="oftype" name="oftype" class="form-control">
+                                                                        <option selected value="'.$row["house_status"].'">'.$row["house_status"].'</option>
+                                                                        <option value="Vacant">Vacant</option>
+                                                                        <option value="Occupied">Occupied</option>
+                                                                    </select>
+                                                                    </div>
+                                                            </div>
+
+                                                        
+
+                                                        <div class="col-md-12">
+                                                            
+                                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                                            <button type="submit" name="editHouse" class="btn btn-danger waves-effect waves-light">Update Record</button>
+                                                        </div>
+
+                                                        </div>
+
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <!-- End Modal -->
+                                       
                                        
 
-                                            <!-- /.modal -->
+                                            <!-- /.modal to delete -->
                                             <div id="responsive-modal'.$row["houseID"].'" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
