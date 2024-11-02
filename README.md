@@ -4,6 +4,8 @@ This is a web application for Rental House Management (with SMS, and Mpesa integ
 # Original View
 ![Administrator dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/dashboard_clear.png)
 
+If you wish test the system, you can click the link below:
+
 # [System Demo](https://test1.ukwaju.systems/admin/login.php)
 
 
