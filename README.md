@@ -1,5 +1,7 @@
 # A web-based Rental House Management System
-This is a web application for Rental House Management (with SMS, and Mpesa integration). It was originally designed for use in administrative reccords management in 2018, and was open to the public in 2020. Much has changed since its design to enhance its stability, security and performance. Nevertheless, I believe that it gives a solid foundation to anybody who is interested in learning the good old PHP and it's application. It has instances for both imperative and OOP.
+This is a web application for Rental House Management. It was originally designed for use in administrative reccords management in 2018, and was open to the public in 2020. The original version utilized SMS for communication and MPESA for payment.
+
+Much has changed since its design to enhance its stability, security and performance. Not withstanding the changes, I believe that it still gives a solid foundation to anybody who is interested in learning the good old PHP and its application. It has instances for both imperative and OOP.
 
 If you wish test the system, you can click the link below:
 
