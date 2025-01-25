@@ -152,7 +152,11 @@
                                     
 
                                         <tr>
-                                            <td>'.$row["tenant_name"].'</td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target="#edit-modal'.$row["tenantID"].'" title="Edit '.$row["tenant_name"].' \'s details" style="color:#1332d9;">
+                                            '.$row["tenant_name"].'
+                                                </a>
+                                            </td>
                                             <td>'.$row["house_name"].'</td>
                                             <td>'.$row["email"].'</td>
                                             <td>'.$row["ID_number"].'</td>
@@ -167,7 +171,7 @@
 
                                             ||
 
-                                            <a href="#"><i class="fa fa-edit"  data-toggle="modal" data-target="#edit-modal'.$row["tenantID"].'" title="Edit '.$row["tenant_name"].' \'s details " style="color:#13dafe;"></i>
+                                            <a href="#"><i class="fa fa-edit"  data-toggle="modal" data-target="#edit-modal'.$row["tenantID"].'" title="Edit '.$row["tenant_name"].' \'s details " style="color:#1332d9;"></i>
                                             </a>
 
                                             </td>
@@ -200,9 +204,83 @@
                                                     </div>
                                                 </div>
                                             </div> 
-                                            <!-- End Modal deleted -->
+                                            <!-- End Modal deleted -->';
+
+
+
+                                    echo'
 
                                             <!-- Modal to edit. -->
+                            <div id="edit-modal'.$row["tenantID"].'" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+
+                                    <div class="col-sm-12 col-xs-12">
+                                    <form action="functions/del_tenant.php" 
+                                    method="post">
+                                        
+                                        <div class="form-group">
+                                            <label for="hname">Tenant Name: *</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon"><i class="fa fa-pencil"></i></div>
+                                                <input type="text" name="tname" class="form-control"
+                                                value="'.$row["tenant_name"].'" 
+                                                id="hname" placeholder="Enter tenant name" required=""> </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="temail">Email: </label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon"><i class="fa fa-at"></i></div>
+                                                <input type="email" name="temail" class="form-control" 
+                                                    value="'.$row["email"].'" 
+                                                id="temail" placeholder="example@nyumbani.com"> </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="idnum">ID Number: *</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                                <input type="number" min="1000" required name="idnum"
+                                                    value="'.$row["ID_number"].'" 
+                                                 class="form-control" id="idnum" placeholder="ID Number..." > </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number: *</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                                <input type="number" min="0" name="phone" 
+                                                value="'.$row["phone_number"].'"
+                                                class="form-control" id="phone" placeholder="e.g 254 712 345678" required=""> </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="prof">Profession: *</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon"><i class="fa fa-briefcase"></i></div>
+                                                <input type="text" required name="prof" class="form-control" 
+                                                    value="'.$row["profession"].'"
+                                                id="prof" placeholder="e.g. Teacher" required=""> </div>
+                                        </div>
+
+                                        <input type="text" name="ten_id" class="form-control" 
+                                                    value="'.$row["tenantID"].'" hidden>
+
+                                        <button type="submit" name="editTenant" class="btn btn-success btn-lg waves-effect waves-light m-r-10 center"><i class="fa fa-plus-circle fa-lg"></i> Update</button>
+                                    </form>
+                                </div>
+
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+
+                                        ';
+
+
+                                    echo'
 
                                          </tr>
                                     ';
