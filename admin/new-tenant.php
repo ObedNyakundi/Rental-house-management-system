@@ -114,7 +114,6 @@
                                 sendSMS($phone, $finalmessage);
                                 
 
-
                                 //head to tenants table and report as an error state code 3. refer errors.php
                                 header('location:tenants.php?state=3');
                             }
@@ -171,6 +170,7 @@
                             <h3 class="box-title m-b-0"><i class="fa fa-user fa-3x"></i> Admit A New Tenant</h3>
                             <p class="text-muted m-b-30 font-13"> Fill in the form below: </p>
                             <div class="row">
+
                                 <div class="col-sm-12 col-xs-12">
                                     <form action="new-tenant.php" method="post">
                                         
@@ -232,6 +232,7 @@
                                         <button type="submit" name="admitTenant" class="btn btn-success btn-lg waves-effect waves-light m-r-10 center"><i class="fa fa-plus-circle fa-lg"></i> Admit this tenant</button>
                                     </form>
                                 </div>
+
                             </div>
                         </div>
                     </div>

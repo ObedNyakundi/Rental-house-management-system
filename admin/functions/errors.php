@@ -33,6 +33,8 @@
 	9 - Failed attempt of rent payment
     10 - New location added successfully.
     11 - New location failed to add.
+    12 - Tenant updated successfully.
+    13 - Tenant update failed.
 
 ****************************************************************************************/
 
@@ -159,6 +161,29 @@
                 <div class='center'><i class='fa fa-map-marker fa-3x'></i></div>
                 <strong>Failed to add new location...</strong><br>
                 <p>The system failed to add the new location. please try again.</p>  <br>
+               
+            <br>
+            
+            </div>";
+                }
+            elseif ($err_state==12) {
+                    $error="<div id='dlt' class='alert alert-slim w3-card-4 alert-success fade in'> 
+                <h1><a href=\"index.php\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\"> &times;</a> </h1>
+                <div class='center'><i class='fa fa-user fa-3x'></i></div>
+                <strong>Tenant Record Updated successfully!</strong><br>
+                <p>The tenant records have been updated successfully.</p>  <br>
+               
+            <br>
+            
+            </div>";
+                }
+
+            elseif ($err_state==13) {
+                    $error="<div id='dlt' class='alert alert-slim w3-card-4 alert-danger fade in'> 
+                <h1><a href=\"index.php\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\"> &times;</a> </h1>
+                <div class='center'><i class='fa fa-user fa-3x'></i></div>
+                <strong>Failed to update tenant record...</strong><br>
+                <p>The system failed to update the tenant records. please try again.</p>  <br>
                
             <br>
             

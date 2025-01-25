@@ -153,7 +153,7 @@
 
                                         <tr>
                                             <td>
-                                                <a href="#" data-toggle="modal" data-target="#edit-modal'.$row["tenantID"].'" title="Edit '.$row["tenant_name"].' \'s details" style="color:#1332d9;">
+                                                <a href="#" data-toggle="modal" data-target="#edit-modal'.$row["tenantID"].'" title="Edit '.$row["tenant_name"].' \'s details" style="color:#03a9f3; font-weight:600;">
                                             '.$row["tenant_name"].'
                                                 </a>
                                             </td>
@@ -210,7 +210,7 @@
 
                                     echo'
 
-                                            <!-- Modal to edit. -->
+                            <!-- Modal to edit. -->
                             <div id="edit-modal'.$row["tenantID"].'" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
