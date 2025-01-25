@@ -161,16 +161,18 @@
                                             <td>'.$row["rent_amount"].'</td>
                                             <td>'.$row["dateAdmitted"].'</td>
                                             <td>'.$row["agreement_file"].'</td>
-                                            <td><a href="#"><i class="fa fa-trash"  data-toggle="modal" data-target="#responsive-modal'.$row["tenantID"].'" title="remove" style="color:red;"></i></a></td>
+                                            <td><a href="#"><i class="fa fa-trash"  data-toggle="modal" data-target="#responsive-modal'.$row["tenantID"].'" title="Delete Tenant" style="color:red;"></i>
+                                            </a></td>
                                        
 
-                                            <!-- /.modal -->
+                                            <!-- /.modal Delete-->
                                             <div id="responsive-modal'.$row["tenantID"].'" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                            <h4 class="modal-title">Are you really sure you want to permanently delete '.$row["tenant_name"].'\'s record?</h4>
+                                                            <h4 class="modal-title">Are you really sure you want to permanently delete 
+                                                            <br><strong>'.$row["tenant_name"].'</strong>\'s record?</h4>
                                                             </div>
                                                         <div class="modal-footer">
 
@@ -190,7 +192,7 @@
                                                     </div>
                                                 </div>
                                             </div> 
-                                            <!-- End Modal -->
+                                            <!-- End Modal deleted -->
 
                                             <!-- Modal to edit. -->
 
