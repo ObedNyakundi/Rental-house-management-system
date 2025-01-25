@@ -109,45 +109,11 @@
                                     //commit
                                     $mysqli->commit();
 
-                                    //send an SMS
-                                $user="acenyakundi";
-                                $Key="4W26PsOgnySBnwf9CZJgEo2K5PyVq9KSBSiLfgCH8w3BHNE0mI";
-                                $senderId="SMARTLINK";
+                                    //send an SMS to the tenant
                                 $tophonenumber=$phone;
                                 $finalmessage="Greetings ".$firstName.", This is a reminder that you're supposed to pay this month's rent of KES.".$rentAmount." by date ".$invoiceDueDate.". You can make the payment by MPESA to +254706748162.";
 
-                                $url="https://sms.movesms.co.ke/api/compose?";
-                                $postData = array(
-                                'username' => $user,
-                                'api_key' => $Key,
-                                'sender' => $senderId,
-                                'to' => $tophonenumber,
-                                'message' => $finalmessage,
-                                'msgtype' => 5,
-                                'dlr' => 0,
-                                );
-
-                                $ch = curl_init();
-                                curl_setopt_array($ch, array(
-                                CURLOPT_URL => $url,
-                                CURLOPT_RETURNTRANSFER => true,
-                                CURLOPT_POST => true,
-                                CURLOPT_POSTFIELDS => $postData
-
-                                ));
-
-                                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-                                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-
-                                $output = curl_exec($ch);
-
-                                if (curl_errno($ch)) {
-
-                                $output = curl_error($ch);
-                                }
-
-                                curl_close($ch);
-                                //end of sending SMS
+                                sendSMS($tophonenumber, $finalmessage);
 
 
                                 //successful. report error code 5

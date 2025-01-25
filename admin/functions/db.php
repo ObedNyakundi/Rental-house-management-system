@@ -50,6 +50,38 @@ $database='Company';
                   other basic methods
       **********************************************************/
 
+      //function for sending an SMS. I used TextSMS.co.ke API
+      function sendSMS($number, $message) 
+  {
+    //chenge these variables to your own for production
+        $apiKey = "YourAPIKey";
+        $partnerID = "YourPartinerID";
+        $shortcode = "TextSMS";
+
+              // Data to be sent in the POST request
+              $postData = [
+                      "apikey" => $apiKey,
+                      "partnerID" => $partnerID, 
+                      "message" => $message,
+                      "shortcode" => $shortcode,
+                      "mobile" => $number,
+                  ];
+
+              // Initialize cURL for making the POST request
+              $ch = curl_init("https://sms.textsms.co.ke/api/services/sendsms/");
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+              curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
+              curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                              'Content-Type: application/json' // Set content type to JSON
+              ]);
+
+                          // Execute the request and handle potential errors. use these variables for later tests
+              $response = curl_exec($ch); //store response
+              $error = curl_error($ch); //store error
+
+              curl_close($ch);  
+  }
+
         //this function is designed to counter sql injection and format the inputs
       function uncrack($data){
         $data=trim($data);
