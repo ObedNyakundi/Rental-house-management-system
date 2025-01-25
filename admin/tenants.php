@@ -161,8 +161,16 @@
                                             <td>'.$row["rent_amount"].'</td>
                                             <td>'.$row["dateAdmitted"].'</td>
                                             <td>'.$row["agreement_file"].'</td>
-                                            <td><a href="#"><i class="fa fa-trash"  data-toggle="modal" data-target="#responsive-modal'.$row["tenantID"].'" title="Delete Tenant" style="color:red;"></i>
-                                            </a></td>
+                                            <td>
+                                            <a href="#"><i class="fa fa-trash"  data-toggle="modal" data-target="#responsive-modal'.$row["tenantID"].'" title="Delete '.$row["tenant_name"].'" style="color:red;"></i>
+                                            </a>
+
+                                            ||
+
+                                            <a href="#"><i class="fa fa-edit"  data-toggle="modal" data-target="#edit-modal'.$row["tenantID"].'" title="Edit '.$row["tenant_name"].' \'s details " style="color:#13dafe;"></i>
+                                            </a>
+
+                                            </td>
                                        
 
                                             <!-- /.modal Delete-->
