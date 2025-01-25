@@ -110,10 +110,9 @@
                                     $mysqli->commit();
 
                                     //send an SMS to the tenant
-                                $tophonenumber=$phone;
                                 $finalmessage="Greetings ".$firstName.", This is a reminder that you're supposed to pay this month's rent of KES.".$rentAmount." by date ".$invoiceDueDate.". You can make the payment by MPESA to +254706748162.";
 
-                                sendSMS($tophonenumber, $finalmessage);
+                                sendSMS($phone, $finalmessage);
 
 
                                 //successful. report error code 5
