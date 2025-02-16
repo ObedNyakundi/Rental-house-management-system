@@ -28,10 +28,10 @@ View a demonstration [here:](https://youtu.be/H1gM3E5sZPs)
 
 ## Major Dependencies
 **PHP Dependencies:**
-- fpdf
-- Africastalking
-- jGraph
-- php-Mpesa
+- ~~fpdf~~ depricated. removed.
+- ~~Africastalking~~ depricated. replaced with TextSMS
+- ~~jGraph~~ depricated. removed.
+- ~~php-Mpesa~~ depricated. replaced with daraja.
 
 **CSS Dependencies**
 - Bootstrap
