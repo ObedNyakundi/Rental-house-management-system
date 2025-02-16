@@ -106,7 +106,7 @@
                                 $tophonenumber=$phone;
                                 $finalmessage="Greetings ".$firstName.", This is a confirmation that your rent payment of KES. ".$amountPaid." has been received and updated. Remaining balance to pay is KES. ".$balance.". Thank you.";
 
-                                    sendSMS($tophonenumber, $finalmessage);
+                                    @sendSMS($tophonenumber, $finalmessage);
                                 //end of sending SMS
 
                                 header("location:payments.php?state=8");
