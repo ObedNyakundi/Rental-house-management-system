@@ -103,43 +103,10 @@
                                 $mysqli -> commit();
 
                                      //send an SMS
-                                $user="acenyakundi";
-                                $Key="4W26PsOgnySBnwf9CZJgEo2K5PyVq9KSBSiLfgCH8w3BHNE0mI";
-                                $senderId="SMARTLINK";
                                 $tophonenumber=$phone;
                                 $finalmessage="Greetings ".$firstName.", This is a confirmation that your rent payment of KES. ".$amountPaid." has been received and updated. Remaining balance to pay is KES. ".$balance.". Thank you.";
 
-                                $url="https://sms.movesms.co.ke/api/compose?";
-                                $postData = array(
-                                'username' => $user,
-                                'api_key' => $Key,
-                                'sender' => $senderId,
-                                'to' => $tophonenumber,
-                                'message' => $finalmessage,
-                                'msgtype' => 5,
-                                'dlr' => 0,
-                                );
-
-                                $ch = curl_init();
-                                curl_setopt_array($ch, array(
-                                CURLOPT_URL => $url,
-                                CURLOPT_RETURNTRANSFER => true,
-                                CURLOPT_POST => true,
-                                CURLOPT_POSTFIELDS => $postData
-
-                                ));
-
-                                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-                                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-
-                                $output = curl_exec($ch);
-
-                                if (curl_errno($ch)) {
-
-                                $output = curl_error($ch);
-                                }
-
-                                curl_close($ch);
+                                    sendSMS($tophonenumber, $finalmessage);
                                 //end of sending SMS
 
                                 header("location:payments.php?state=8");
