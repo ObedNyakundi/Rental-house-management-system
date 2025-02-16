@@ -5,7 +5,7 @@ Much has changed since its design to enhance its stability, security and perform
 
 If you wish test the system, you can click the link below:
 
-# [System Demo](https://test1.ukwaju.systems/admin/login.php)
+## [System Demo](https://test1.ukwaju.systems/admin/login.php)
 
 
 # Original View
@@ -14,7 +14,10 @@ If you wish test the system, you can click the link below:
 
 
 # Or the more stable Laravel version view...
-![New Dashboard](https://github.com/ObedNyakundi/Rental-house-management-system/blob/main/dashbnew.png)
+![New Dashboard](./dashnewb_dark.png)
+
+developed under **[Ukwaju Systems](https://ukwaju.systems)** 
+View a demonstration [here:](https://youtu.be/H1gM3E5sZPs)
 
 
 # Included features
