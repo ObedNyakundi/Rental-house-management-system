@@ -13,6 +13,12 @@ $user='root';
 $usrpassword='';
 $database='Company';
 
+//optional for sending SMS via sms.textsms.co.ke API
+//chenge these variables to your own for production
+$sms_apiKey = "YourAPIKey";
+$sms_partnerID = "YourPartinerID";
+$sms_shortcode = "TextSMS";
+
 
   /* DATABASE CONNECTIONS AS DEFINED IN VARIOUS PAGES*/
         //VARIABLES
@@ -53,17 +59,13 @@ $database='Company';
       //function for sending an SMS. I used TextSMS.co.ke API
       function sendSMS($number, $message) 
   {
-    //chenge these variables to your own for production
-        $apiKey = "YourAPIKey";
-        $partnerID = "YourPartinerID";
-        $shortcode = "TextSMS";
 
               // Data to be sent in the POST request
               $postData = [
-                      "apikey" => $apiKey,
-                      "partnerID" => $partnerID, 
+                      "apikey" => $sms_apiKey,
+                      "partnerID" => $sms_partnerID, 
                       "message" => $message,
-                      "shortcode" => $shortcode,
+                      "shortcode" => $sms_shortcode,
                       "mobile" => $number,
                   ];
 

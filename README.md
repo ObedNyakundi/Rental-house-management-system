@@ -62,6 +62,12 @@ $usrpassword='YourDBPassword';
 $database='YourDBName';
 
  ``` 
+ - To enable sending SMS via the system, update the variables under:
+ ```
+$sms_apiKey = "YourAPIKey";
+$sms_partnerID = "YourPartinerID";
+$sms_shortcode = "TextSMS";
+ ```
  - run the `index.php` file
  - run the `admin/` folder to login into the admin panel
 
